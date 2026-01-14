@@ -1,0 +1,14 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  font-weight: 400;
+
+  color: #a6adbb;
+  background-color: #131516;
+
+}
+
+.header {
+  color:#3b9aff;
+  font-weight: 650;
+}

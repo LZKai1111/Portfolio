@@ -1,0 +1,32 @@
+.intro-page {
+    height: 53rem;
+}
+
+.intro-container {
+    margin: 5rem 0 0 5rem;
+    font-size: 1.2rem;
+    width: 70%;
+}
+
+.intro-container h1 {
+    margin: 0 0 3rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.social-container {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 786px) {
+    .intro-container {
+        font-size: 0.8rem;
+    }
+}

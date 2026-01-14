@@ -1,0 +1,169 @@
+.section-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    margin: 4rem 0;
+    align-items: start;
+}
+
+.section-header {
+    width: 10rem;
+    margin: 0;
+}
+
+
+.section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section-card {
+    padding: 1.5rem;
+}
+
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.card-notes {
+    margin: 0 0 0.4rem;
+}
+
+.card-description {
+    padding-left: 3rem;
+}
+
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 6px;
+    max-width: 220px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-tag {
+    border: 1px solid #3b9aff;
+    border-radius: 5px;
+    margin: 0 0.5rem 0 0;
+    padding: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+}
+
+.section-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+
+.url-link {
+    color: #a6adbb;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.animated-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;          
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.animated-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+@media (max-width: 768px) {
+  .section-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .section-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .card-top {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Section layout: stack header and body */
+  .section-container {
+    display: block;
+  }
+
+  .section-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .section-card.flex {
+    flex-direction: column;
+  }
+
+
+  .project-image {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1rem;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
