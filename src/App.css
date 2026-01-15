@@ -95,7 +95,15 @@
 }
 
 .justify-center {
+    display: flex;
     justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+.width-fit {
+    width: fit-content;
 }
 
 .about-img-div img {
@@ -103,4 +111,8 @@
   height: auto;
   max-width: 100%;
   display: block;
+}
+
+.test {
+    border: 3px solid teal;
 }

@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 export default function About() {
+
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+    };
+
+
     return (
         <div className="section-container">
             <h3 className="section-header header">ABOUT ME</h3>
@@ -20,7 +26,7 @@ export default function About() {
                 <div className="mg-tp-1">
                     <div className="card-notes">
                         Outside of work, I enjoy many other activities such as reading and scale modelling! 
-                        <Link to="/about"><button className='btn-home'>Read more &rarr;</button></Link>
+                        <Link to="/about" ><button className='btn-home url-link animated-link' onClick={handleLinkClick}>Read more &rarr;</button></Link>
                     </div>
                 </div>
             </div>

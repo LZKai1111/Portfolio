@@ -57,7 +57,7 @@ export default function Intro() {
                         <CopyToClipboard text={"liangzikai1111@gmail.com"} />
                     </div>
                     <a
-                    href="/Zikai_Resume.pdf"
+                    href={`${import.meta.env.BASE_URL}Zikai_Resume.pdf`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="url-link animated-link"

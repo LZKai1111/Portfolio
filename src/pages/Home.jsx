@@ -8,8 +8,14 @@ import { PROJECTS } from '../data/projects'
 import { EDUCATIONS } from '../data/education'
 import { SKILLS } from '../data/skills'
 import Footer from '../components/footer/footer'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
+
+
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+    };
 
     return(
     <>
@@ -23,6 +29,14 @@ export default function Home() {
             })}
 
             <SectionProjects arr={PROJECTS.slice(0, 3)}/>
+            <div className='justify-center'>
+            <Link 
+            to="/Projects" 
+            className="url-link animated-link text-center"
+            onClick={handleLinkClick}
+            >View more &rarr;</Link>
+            </div>
+
             {EDUCATIONS.map((education, eduID) => {
                 return(<div key={eduID}><Section item={education} /></div>)
             })}
